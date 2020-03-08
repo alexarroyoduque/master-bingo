@@ -1,0 +1,17 @@
+{
+  "name": "bingo",
+  "version": "0.0.0",
+  "authors": [
+    "alejandro arroyo duque"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#1.11.1"
+  }
+}

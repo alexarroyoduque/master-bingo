@@ -1,0 +1,42 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../bingo-ball/bingo-ball.html">
+
+
+<dom-module id="bingo-ball">
+    <template>
+      <span class$="ball active-{{ball.isActive}}">{{ball.value}}</span>
+    </template>
+    <style>
+
+      .ball {
+        background-color: #E0E0E0;
+        color: #212121;
+        border-radius: 50%;
+        padding: 20px;
+        display: inline-block;
+        width: 28px;
+        height: 28px;
+        font-size: 26px;
+        margin: 4px;
+        box-shadow: 0 0 0 2px #212121 inset;
+      }
+
+      .active-true {
+        transition: background-color .5s ease;
+        background-color: #81e210;
+      }
+
+    </style>
+</dom-module>
+
+<script>
+    Polymer({
+        is: 'bingo-ball',
+        properties: {
+          ball: {
+            type: Object,
+            notify: true
+          }
+        }
+    });
+</script>

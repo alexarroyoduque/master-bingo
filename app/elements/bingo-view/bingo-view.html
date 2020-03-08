@@ -1,0 +1,298 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../bingo-ball/bingo-ball.html">
+
+
+<dom-module id="bingo-view">
+  <template>
+    <audio id="ball-audio1" src="audio/1.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio2" src="audio/2.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio3" src="audio/3.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio4" src="audio/4.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio5" src="audio/5.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio6" src="audio/6.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio7" src="audio/7.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio8" src="audio/8.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio9" src="audio/9.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio10" src="audio/10.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio11" src="audio/11.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio12" src="audio/12.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio13" src="audio/13.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio14" src="audio/14.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio15" src="audio/15.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio16" src="audio/16.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio17" src="audio/17.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio18" src="audio/18.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio19" src="audio/19.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio20" src="audio/20.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio21" src="audio/21.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio22" src="audio/22.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio23" src="audio/23.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio24" src="audio/24.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio25" src="audio/25.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio26" src="audio/26.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio27" src="audio/27.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio28" src="audio/28.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio29" src="audio/29.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio30" src="audio/30.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio31" src="audio/31.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio32" src="audio/32.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio33" src="audio/33.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio34" src="audio/34.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio35" src="audio/35.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio36" src="audio/36.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio37" src="audio/37.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio38" src="audio/38.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio39" src="audio/39.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio40" src="audio/40.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio41" src="audio/41.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio42" src="audio/42.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio43" src="audio/43.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio44" src="audio/44.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio45" src="audio/45.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio46" src="audio/46.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio47" src="audio/47.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio48" src="audio/48.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio49" src="audio/49.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio50" src="audio/50.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio51" src="audio/51.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio52" src="audio/52.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio53" src="audio/53.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio54" src="audio/54.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio55" src="audio/55.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio56" src="audio/56.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio57" src="audio/57.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio58" src="audio/58.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio59" src="audio/59.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio60" src="audio/60.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio61" src="audio/61.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio62" src="audio/62.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio63" src="audio/63.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio64" src="audio/64.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio65" src="audio/65.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio66" src="audio/66.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio67" src="audio/67.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio68" src="audio/68.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio69" src="audio/69.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio70" src="audio/70.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio71" src="audio/71.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio72" src="audio/72.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio73" src="audio/73.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio74" src="audio/74.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio75" src="audio/75.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio76" src="audio/76.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio77" src="audio/77.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio78" src="audio/78.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio79" src="audio/79.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio80" src="audio/80.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio81" src="audio/81.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio82" src="audio/82.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio83" src="audio/83.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio84" src="audio/84.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio85" src="audio/85.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio86" src="audio/86.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio87" src="audio/87.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio88" src="audio/88.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio89" src="audio/89.ogg" aria-hidden="true"></audio>
+    <audio id="ball-audio90" src="audio/90.ogg" aria-hidden="true"></audio>
+
+    <div class="panel">
+      <div class="new-ball new-ball-1">
+        {{newBallActive.value}}
+      </div>
+      <template is="dom-if" if="{{!isStartDisabled}}" restamp="true">
+        <span class="pause-info">PAUSA</span>
+      </template>
+      <template is="dom-repeat" items="{{balls}}">
+        <bingo-ball ball="{{item}}"></bingo-ball>
+      </template>
+      <div class="new-ball new-ball-2">
+        {{newBallActive.value}}
+      </div>
+
+      <button class="start" disabled$="{{isStartDisabled}}" on-click="start">{{startText}}</button>
+      <button class="stop" disabled$="{{!isStartDisabled}}"on-click="stop">Stop</button>
+    </div>
+
+  </template>
+  <style>
+    .panel {
+      margin: 0 auto;
+      text-align: center;
+      width: 830px;
+      position: relative;
+    }
+
+    .new-ball {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background-color: #E91E63;
+      box-shadow: 0 0 0 6px white inset;
+      border: 8px solid #E91E63;
+      color: white;
+      font-size: 80px;
+      padding: 20px;
+      display: inline-block;
+      top: 40px;
+    }
+
+    .new-ball-1 {
+      left: -22%;
+
+    }
+
+    .new-ball-2 {
+      left: 103%;
+    }
+
+    .pause-info {
+      background-color: white;
+      color: #6f6d6d;
+      display: inline-block;
+      font-size: 80px;
+      left: 32.5%;
+      opacity: .7;
+      padding: 20px;
+      position: absolute;
+      top: 100px;
+    }
+
+    button {
+      outline: 0;
+      border: none;
+      height: 50px;
+      width: 100px;
+      font-size: 18px;
+      color: white;
+      margin: 10px;
+      position: absolute;
+      left: -170px;
+      background-color: #3c49ef;
+    }
+
+    button:active {
+      background-color: #616161;
+    }
+
+    .start {
+      background-color: #3c49ef;
+      top: 400px;
+    }
+
+    .stop {
+      background-color: #f121ba;
+      top: 500px;
+    }
+
+    button:disabled {
+      opacity: .2;
+    }
+
+  </style>
+</dom-module>
+
+<script>
+    Polymer({
+        is: 'bingo-view',
+        properties: {
+          startText: {
+            type: String,
+            value: 'Empezar'
+          },
+          balls: {
+            type: Array,
+            notify: true,
+            value: function() {
+              return [];
+            }
+          },
+          randomBalls: {
+            type: Array,
+            value: function() {
+              return [];
+            }
+          },
+          newBallActive :{
+            type: Object,
+            value: function() {
+              return {};
+            }
+          },
+          isStartDisabled: {
+            type: Boolean,
+            value: false
+          }
+        },
+
+        ready: function() {
+          this.generateBalls();
+          this.generateRandomBalls(this.balls);
+
+          document.addEventListener('keyup', function(e) {
+            if (e.code === 'Space') {
+              this.managePausedGame();
+            }
+          }.bind(this));
+        },
+
+        generateBalls: function() {
+          for (var i = 0; i < 90; i++) {
+            this.push('balls', {
+              value: i + 1,
+              isActive: false,
+              index: i
+            });
+          }
+        },
+
+        shuffle: function(a) {
+            var j, x, i;
+            for (i = a.length - 1; i > 0; i--) {
+                j = Math.floor(Math.random() * (i + 1));
+                x = a[i];
+                a[i] = a[j];
+                a[j] = x;
+            }
+        },
+
+        generateRandomBalls: function(balls) {
+          this.set('randomBalls', this.balls.slice());
+          this.shuffle(this.randomBalls);
+        },
+
+        activeBall: function() {
+          this.newBallActive = this.pop('randomBalls');
+          this.notifyPath('balls.' + this.newBallActive.index + '.isActive', true);
+
+          this.$['ball-audio' + this.newBallActive.value].play();
+        },
+
+        start: function() {
+          var interval = 5000;
+          this.startText = 'Continuar';
+          this.isStartDisabled = true;
+          this.timer = setInterval(function() {
+            this.activeBall();
+          }.bind(this), interval);
+        },
+
+        stop: function() {
+          clearInterval(this.timer);
+          this.isStartDisabled = false;
+        },
+
+        managePausedGame: function() {
+          if (!this.isStartDisabled) {
+            this.start();
+          } else {
+            this.stop();
+          }
+        }
+
+
+
+
+
+    });
+</script>

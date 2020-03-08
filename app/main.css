@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'Roboto-Medium';
+  src: url('fonts/Roboto-Medium.ttf');
+}
+
+body {
+  background: linear-gradient(#59b2f9, #d59dde);
+  font-family: 'Roboto-Medium';
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+}
