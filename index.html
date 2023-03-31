@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+  <!-- Register service worker if supported. -->
+  <!--
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/service-worker.js');
+    }
+  </script>
+  -->
+  
+  <!-- Load polyfills -->
+  <script 
+    src="node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"
+    defer>
+  </script> 
+
+  <!-- Load components via WebComponents.waitFor -->
+  <script type="module">
+    window.WebComponents = window.WebComponents || { 
+      waitFor(cb){ addEventListener('WebComponentsReady', cb) }
+    } 
+    WebComponents.waitFor(async () => { 
+      import('./src/bingo-main.js');
+    });
+  </script>
+  
+
+  <meta name="description" content="Bingo, press space to start or stop">
+  <meta name="keywords" content="bingo"/>
+  <meta name="theme-color" content="#000">
+  <title>Master Bingo</title>
+
+  <meta property="og:title" content="Master Bingo"/>
+  <meta property="og:description" content="Bingo, press space to start or stop"/>
+  <meta property="og:keywords" content="bingo"/>
+  <meta property="og:image" content="/manifest/favicon.png">
+
+  <meta property="og:type" content="website">
+  <meta name='viewport' content='initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=yes, width=device-width'>
+  <link rel="manifest" href="./manifest.json">
+  <link rel="shortcut icon" href="/manifest/favicon.ico" type="image/x-icon">
+  <link href="/manifest/icon-144x144.png" sizes="144x144" rel="apple-touch-icon">
+  
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="UTF-8">
+
+</head>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Reem+Kufi+Fun:wght@400;500;600;700&family=Roboto+Mono&display=swap');
+
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+
+  html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Roboto Mono', monospace;
+  }
+
+
+</style>
+<body>
+  <div class="main">
+    <div class="wrapper">
+      <bingo-main>
+        <!-- Placeholders to improve time to first paint -->
+        <h1>Loading...</h1>
+    
+        <!-- Check for JavaScript -->
+        <p id="jsyes"></p>
+        <script type="text/javascript">
+          document.getElementById('jsyes').innerHTML='Loading...';
+        </script>
+        <noscript>
+          Could not render the custom element. Check that JavaScript is enabled.
+        </noscript>
+      </bingo-main>
+    </div>
+  </div>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-app.js"></script>
+  
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyBCr87myKlFWdwoVezsMM1db3Xk1D6j1TE",
+      authDomain: "master-bingo.firebaseapp.com",
+      projectId: "master-bingo",
+      storageBucket: "master-bingo.appspot.com",
+      messagingSenderId: "656647610810",
+      appId: "1:656647610810:web:b614f268fb46c8e0eafd83"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+</body>
+
+
+</html>

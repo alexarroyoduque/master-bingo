@@ -1,0 +1,24 @@
+{
+  "shell": "src/bingo-main.js",
+  "entrypoint": "index.html",
+  "fragments": [
+    "src/elements/bingo-ball.js"
+  ],
+  "npm": true,
+  "moduleResolution": "node",
+  "sources": ["src/**/*", "manifest/**", "manifest.json", "package.json"],
+  "extraDependencies": [
+    "robots.txt",
+    "node_modules/@webcomponents/webcomponentsjs/**"
+  ],
+  "builds": [{
+    "bundle": true,
+    "js": { 
+      "minify": true,
+      "compile": "es5",
+      "transformModulesToAmd": true
+    },
+    "addServiceWorker": false,
+    "addPushManifest": true
+  }]
+}

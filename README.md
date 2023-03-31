@@ -1,25 +1,34 @@
 # Bingo
 
-[Polymer](https://www.polymer-project.org/1.0/) game experiment by [Alejandro Arroyo Duque](http://alexarroyoduque.github.io/).
+Demo: [https://master-bingo.web.app](https://master-bingo.web.app)
 
-## Development
 
-### Install dependencies
+## Quick start
 
-```sh
-$ bower install && npm install
+- node version: 14.18.3
+
+```
+npm install -g polymer-cli
+git clone "this-repository"
+cd "this-project"
+npm install
+polymer serve
 ```
 
-### Tasks
+## Deploy
 
-```sh
-$ gulp
+```
+polymer build
+polymer serve build/default
 ```
 
-```sh
-$ gulp build
+```
+firebase deploy
 ```
 
-## License
+## Credits
+> Developed by [@AlexArroyoDuque](https://twitter.com/AlexArroyoDuque)
 
-Developed by [Alejandro Arroyo Duque](http://alexarroyoduque.github.io/) (2017)
+> Sample LitElement project [https://github.com/PolymerLabs/start-lit-element](https://github.com/PolymerLabs/start-lit-element)
+
+> Google fonts [https://fonts.google.com](https://fonts.google.com)
