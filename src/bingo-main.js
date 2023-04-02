@@ -113,6 +113,35 @@ export class BingoMain extends LitElement {
 
   static get styles() {
     return css`
+
+        .parent {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: 1fr 2fr;
+          grid-column-gap: 0px;
+          grid-row-gap: 0px;
+          height: calc(100vh - 3rem);
+          align-items: center;
+          max-width: 1000px;
+          margin: 0 auto;
+        }
+
+        /* buttons */
+        .div1 {
+          grid-area: 1 / 1 / 2 / 2;
+          text-align: center;
+        }
+        /* new ball */
+        .div2 {
+          grid-area: 1 / 2 / 2 / 4;
+          text-align: center;
+        }
+        /* balls */
+        .div3 {
+          grid-area: 2 / 1 / 3 / 4;
+          text-align: center;
+        }
+
         .panel {
           margin: 0 auto;
           text-align: center;
@@ -121,50 +150,39 @@ export class BingoMain extends LitElement {
         }
 
         .new-ball {
-          position: absolute;
-          width: 100px;
-          height: 100px;
+          width: 7rem;
+          height: 7rem;
           border-radius: 50%;
           background-color: #E91E63;
           box-shadow: 0 0 0 6px white inset;
           border: 8px solid #E91E63;
           color: white;
-          font-size: 80px;
-          line-height: 90px;
-          padding: 20px;
+          font-size: 90px;
+          padding: 1rem;
           display: inline-block;
-          top: 40px;
-        }
-
-        .new-ball-1 {
-          left: -22%;
-        }
-
-        .new-ball-2 {
-          left: 103%;
+          line-height: 107px;
         }
 
         .pause-info {
           background-color: white;
           color: #6f6d6d;
           font-size: 80px;
-          left: 32.5%;
           opacity: .7;
           padding: 20px;
           position: absolute;
-          top: 100px;
+          top: 50%;
+          left: 0px;
+          right: 0px;
+          text-align: center;
         }
 
         button {
           outline: 0;
           border: none;
           height: 50px;
-          width: 100px;
+          width: 6rem;
           font-size: 18px;
           color: white;
-          margin: 10px;
-          position: absolute;
-          left: -170px;
           background-color: #3c49ef;
         }
 
@@ -174,27 +192,16 @@ export class BingoMain extends LitElement {
 
         .start {
           background-color: #3c49ef;
-          top: 400px;
-        }
-
-        .start::after {
-          content: "Puedes usar la tecla espacio";
-          position: absolute;
-          color: #616161;
-          font-size: 13px;
-          left: 0;
-          top: 52px;
+          margin-bottom: 1rem;
         }
 
         .stop {
           background-color: #f121ba;
-          top: 500px;
         }
 
         button:disabled {
           opacity: .2;
         }
-
     `;
   }
     
@@ -208,24 +215,25 @@ export class BingoMain extends LitElement {
         ></audio>
       `)}
 
-      <div class="panel">
-
-        <div class="new-ball new-ball-1">
-          ${this.newBallActive.value}
-        </div>
-
+      <div class="parent">
         <span ?hidden=${this.isStartDisabled} class="pause-info">PAUSA</span>
 
-        ${this.balls.map(ball => html`
-          <bingo-ball id='ball${ball.index}' .ball=${ball}></bingo-ball>
-        `)}
-
-        <div class="new-ball new-ball-2">
-          ${this.newBallActive.value}
+        <div class="div1">
+          <button class="start" ?disabled=${this.isStartDisabled} @click=${this.start}>${this.startText}</button>
+          <button class="stop" ?disabled=${!this.isStartDisabled} @click=${this.stop}>Stop</button>
+          <p>Puedes usar la tecla espacio</p>
+        </div>
+        <div class="div2">
+          <div class="new-ball new-ball-1">
+            ${this.newBallActive.value}
+          </div>
+        </div>
+        <div class="div3">
+          ${this.balls.map(ball => html`
+            <bingo-ball id='ball${ball.index}' .ball=${ball}></bingo-ball>
+          `)}
         </div>
 
-        <button class="start" ?disabled=${this.isStartDisabled} @click=${this.start}>${this.startText}</button>
-        <button class="stop" ?disabled=${!this.isStartDisabled} @click=${this.stop}>Stop</button>
       </div>
     `;
   }
