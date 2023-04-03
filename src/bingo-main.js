@@ -122,7 +122,7 @@ export class BingoMain extends LitElement {
           grid-row-gap: 0px;
           height: calc(100vh - 3rem);
           align-items: center;
-          max-width: 1000px;
+          max-width: 600px;
           margin: 0 auto;
         }
 
